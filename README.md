@@ -52,7 +52,7 @@ project is a deep dive into a pizza store's transactional data to uncover valuab
 
 The pizaa store dataset comprises four primary tables, each capturing distinct information about the pizza store’s operations and offerings.
 
-![Pizza ER Diagram](Pizza ER Diagram.png)
+![Pizza Schema Diagram](pizza_schema_diagram.png)
 
 
 ## Key Queries
