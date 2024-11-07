@@ -1,3 +1,5 @@
+![pizza_hut](pizza_hut.jpg)
+
 # Pizza-Insights-Data-Driven-Analysis-for-Smarter-Slice-Decisions
 
 ## Table of Contents
@@ -50,7 +52,7 @@ project is a deep dive into a pizza store's transactional data to uncover valuab
 
 The pizaa store dataset comprises four primary tables, each capturing distinct information about the pizza store’s operations and offerings.
 
-![schema_diagram](schema_diagram.png)
+![Pizza ER Diagram](Pizza-ER-Diagram.png)
 
 
 ## Key Queries
@@ -59,21 +61,27 @@ The pizaa store dataset comprises four primary tables, each capturing distinct i
 
 The analysis calculates the total number of orders, the overall revenue generated from pizza sales, and identifies the highest-priced pizza, giving a clear picture of the store's performance.
 
+
 **Popular Pizza Trends:**
 
 The queries identify the most common pizza sizes, the top 5 most ordered pizza types along with their quantities, and the category-wise distribution of pizzas, offering insights into customer preferences.
+
 
 **Time-Based Insights:**
 
 By analyzing the distribution of orders by hour of the day and categorizing revenue by time slots (morning, afternoon, evening), these queries help uncover peak hours and optimal times for revenue generation.
 
+
 **Revenue and Growth Analysis:**
 
  The queries determine revenue distribution across dates, calculate the top pizza types based on revenue, and track the growth rate of sales day-over-day, highlighting trends and opportunities for improvement.
 
+
 **Customer Behavior and Ingredient Preferences:**
 
 These queries identify repeat customers, their most frequently ordered pizza types, the highest-revenue days, and the sales impact of specific ingredients, such as mushrooms, over time, helping to refine marketing and promotional strategies.
+
+
 
 ## Tools and Technologies Used:
 
