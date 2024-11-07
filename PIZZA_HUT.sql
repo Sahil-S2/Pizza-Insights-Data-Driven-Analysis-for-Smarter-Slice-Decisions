@@ -1,5 +1,3 @@
-CREATE DATABASE PIZZA_HUT;
-
 USE PIZZA_HUT;
 SELECT 
     *
@@ -22,6 +20,7 @@ FROM
 
 
 -- 1. Retrieve the total number of orders placed.
+
 SELECT 
     COUNT(ORDER_ID) AS 'TOTAL NUMBER OF ORDER PLACED'
 FROM
@@ -37,6 +36,7 @@ FROM ORDER_DETAILS
 JOIN PIZZAS
 ON PIZZAS.PIZZA_ID = ORDER_DETAILS.PIZZA_ID;
 
+
 -- 3. Identify the highest-priced pizza.
 
 SELECT 
@@ -48,6 +48,7 @@ WHERE
             MAX(PRICE)
         FROM
             PIZZAS);
+
 
 -- 4. Identify the most common pizza size ordered.
 
@@ -61,6 +62,7 @@ FROM
 GROUP BY PIZZAS.SIZE
 ORDER BY COUNT(ORDER_DETAILS.ORDER_DETAILS_ID) DESC
 LIMIT 1;
+
 
 
 -- 5. List the top 5 most ordered pizza types along with their quantities.
@@ -78,6 +80,7 @@ GROUP BY PIZZA_TYPES.NAME
 ORDER BY SUM(ORDER_DETAILS.QUANTITY) DESC
 LIMIT 5;
 
+
 -- 6. Join the necessary tables to find the total quantity of each pizza category ordered.
 
 SELECT 
@@ -92,6 +95,7 @@ FROM
 GROUP BY PIZZA_TYPES.CATEGORY
 ORDER BY SUM(ORDER_DETAILS.QUANTITY) DESC;
 
+
 -- 7. Determine the distribution of orders by hour of the day.
 
 SELECT 
@@ -100,6 +104,7 @@ FROM
     ORDERS
 GROUP BY HOUR(TIME);
 
+
 -- 8. Join relevant tables to find the category-wise distribution of pizzas.
 
 SELECT 
@@ -107,6 +112,8 @@ SELECT
 FROM
     PIZZA_TYPES
 GROUP BY CATEGORY;
+
+
 -- 9. Group the orders by date and calculate the average number of pizzas ordered per day.
 
 SELECT 
@@ -119,6 +126,7 @@ FROM
         ORDERS
     JOIN ORDER_DETAILS ON ORDERS.ORDER_ID = ORDER_DETAILS.ORDER_ID
     GROUP BY DATE) AS ORDER_QUANTITY;
+
 
 -- 10. Determine the top 3 most ordered pizza types based on revenue.
 
@@ -189,6 +197,8 @@ ORDER BY ROUND(SUM(PIZZAS.PRICE * ORDER_DETAILS.QUANTITY),
         2) DESC
 LIMIT 3;
 
+
+
 -- 14. Calculate the total revenue for each date and group by time slots (e.g., morning, afternoon, evening)
 --     to find the busiest and highest revenue time slots.
 
@@ -209,6 +219,7 @@ FROM
 GROUP BY O.DATE , TIME_SLOT
 ORDER BY TOTAL_REVENUE DESC
 LIMIT 10;
+
 
 -- 15. Create a query to show the growth rate of total sales for each day compared to the previous day.
 
@@ -245,6 +256,8 @@ FROM
     SALES_GROWTH
 ORDER BY
     DATE;
+
+
 
 -- 16. Identify customers who place multiple orders and determine their most frequently ordered pizza types.
 
@@ -300,7 +313,9 @@ WHERE
     RANK_ = 1
 ORDER BY
 	QNTY_OF_PIZZA_TYPE DESC;
-    
+
+
+
 -- 17. Find dates with the highest revenue over a period. This could be used to plan future promotional events.
 
 SELECT 
