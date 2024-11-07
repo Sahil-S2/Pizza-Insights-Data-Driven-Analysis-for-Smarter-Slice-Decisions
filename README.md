@@ -55,26 +55,6 @@ The pizaa store dataset comprises four primary tables, each capturing distinct i
 ![Pizza Schema Diagram](pizza_schema_diagram.png)
 
 
-+-------------------+        +-------------------+        +-------------------+
-|      orders       |        |   order_details   |        |   pizza_types     |
-+-------------------+        +-------------------+        +-------------------+
-| PK order_id       |<------>| FK order_id       |        | PK pizza_type_id  |
-| date              |        | PK order_details_id|        | name              |
-| time              |        | FK pizza_id        |        | category          |
-+-------------------+        | quantity           |        | ingredients       |
-                            +-------------------+        +-------------------+
-                                                          |
-                                                          |
-                                                         |
-                                                +-------------------+
-                                                |      pizzas       |
-                                                +-------------------+
-                                                | PK pizza_id       |
-                                                | FK pizza_type_id  |
-                                                | size              |
-                                                | price             |
-                                                +-------------------+
-
 
 ## Key Queries
 
